@@ -1,7 +1,7 @@
 //Task1
 var a;
 a = 10;
-a = 20;
+a = 200;
 var a = 30;
 console.log(a+b);
 
