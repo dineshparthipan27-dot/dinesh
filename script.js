@@ -3,7 +3,7 @@ var a;
 a = 10;
 a = 20;
 var a = 30;
-console.log(a+b);
+console.log(a);
 
 //Task2
 let b;
