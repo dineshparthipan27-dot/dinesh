@@ -160,7 +160,7 @@ console.log(user.age);
 user.skills.push("Node.js");
 console.log( user.skills);
 // user
-console.log(user);
+console.log( user);
 
 
 
