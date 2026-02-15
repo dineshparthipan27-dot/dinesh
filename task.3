@@ -1,0 +1,112 @@
+//TASK 1
+
+let firstName = "Dinesh"
+let lastName = "Parthipan"
+
+// 1. Print using +
+console.log(firstName + " " + lastName)  
+
+// 2. using template string
+console.log(`${firstName} ${lastName}`)
+
+// 3.length of full name
+let fullName = `${firstName} ${lastName}`
+console.log(fullName.length)              
+
+//TASK 2 
+
+console.log(typeof("5" + 2))  
+
+console.log(typeof(5 + "2")) 
+
+console.log(typeof(true + 1)) 
+
+console.log(typeof(false + "hello")) 
+
+console.log(typeof(null + 1)) 
+
+//TASK 3
+
+console.log(Number("100"))      
+console.log(Number("10.5"))     
+console.log(Number("abc"))      
+console.log(Number(true))       
+console.log(Number(false))     
+console.log(Number(null))       
+console.log(Number(undefined)) 
+
+//TASK 4 
+
+console.log(Boolean(0))          // false
+console.log(Boolean(1))          // true
+console.log(Boolean(""))         // false
+console.log(Boolean("hello"))    // true
+console.log(Boolean(null))       // false
+console.log(Boolean(undefined))  // false
+console.log(Boolean([]))         // true
+console.log(Boolean({}))         // true
+
+//TASK 5 – Even or Odd
+
+let num = 7
+
+if (num % 2 == 0) {
+    console.log(num + " is Even")
+} else {
+    console.log(num + " is Odd")  
+}
+
+//TASK 6
+
+let marks = 75
+ 
+if (marks >= 50 && marks<=74) {
+    console.log("Grade C")
+} else if (marks >= 75 && marks<=89) {
+    console.log("Grade B")                     
+} else if (marks >= 90) {
+    console.log("Grade A")
+} else {
+    console.log("Fail")
+}                                       
+
+//TASK 7
+
+let dayNumber = 3
+
+switch (dayNumber) {
+    case 0: console.log("Sunday");break;
+    case 1: console.log("Monday");break;
+    case 2: console.log("Tuesday");break;
+    case 3: console.log("Wednesday");break; 
+    case 4: console.log("Thursday");break;
+    case 5: console.log("Friday");break;
+    case 6: console.log("Saturday");break;
+    default: console.log("Invalid day")     
+}                                          
+
+//TASK 8 
+for (let i = 5; i >= 1; i--) {
+    console.log(i)
+}                               
+
+//TASK 9 
+
+for (let i = 1; i <= 10; i++) {
+     console.log(`3 x ${i} = ${3 * i}`)
+}                                        
+
+//TASK 10 
+
+let sum = 0
+for (let a = 1; a <= 10; a++) {
+    sum = sum + a
+}
+console.log('Final sum=' + sum)          
+
+
+if("0"){
+    console.log("true block")   
+}else{
+    console.log("false block")
+}                               
