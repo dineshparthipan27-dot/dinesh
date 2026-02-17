@@ -1,0 +1,237 @@
+
+
+// Task 1 
+
+let word = "Developer";
+
+console.log("Character:");
+for (let char of word) {
+    console.log(char);
+}
+
+let count = 0;
+for (let char of word) {
+    count++;
+}
+console.log("Total Letters:", count);
+
+console.log("Vowels:");
+for (let char of word) {
+    if ("aeiou".includes(char)) {
+        console.log(char);
+    }
+}
+
+// Task 2 
+
+let skills = ["HTML", "CSS", "JavaScript", "React"];
+
+console.log("All skills:");
+for (let skill of skills) {
+  console.log(skill);
+}
+
+for (let skill of skills) {
+  console.log(`I Done ${skill}`);
+}
+
+console.log("Total skills:", skills.length);
+
+
+// Task 3
+let employee = {
+  name: "Dinesh",
+  role: "developer",
+  salary: 35000,
+  experience: "1 years"
+};
+
+console.log("All keys:");
+for (let key in employee) {
+  console.log(key);
+}
+
+console.log("All values:");
+for (let key in employee) {
+  console.log(employee[key]);
+}
+
+console.log("Name:", employee.name);
+
+
+// Task 4 
+
+function table(num) {
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${num} x ${i} = ${num * i}`);
+  }
+}
+table(5);
+
+
+// Task 5
+
+function square(num) {
+  return num * num;
+}
+let result = square(4);
+console.log("Square:", result);
+
+
+// Task 6
+
+function register(name, department, role = "Backend") {
+  console.log(`Name: ${name}, Department: ${department}, Role: ${role}`);
+}
+
+register("Dinesh", "IT", "Frontend");
+register("Dinesh", "IT");
+
+
+// Task 7
+
+function checkScope() {
+  if (true) {
+    var a = 100;
+    let b = 200;
+  }
+
+   console.log(a);
+   //console.log(b); // Error 
+}
+checkScope();
+
+
+// Task 8
+
+console.log(g);
+var g = 10;
+
+try {
+  console.log(h);
+  let h = 20;
+} catch (error) {
+  console.log("Error:", error.message);
+}
+
+
+// Task 9 
+
+function greet(name) {
+  console.log(`Welcome ${name}!`);
+}
+greet("Dinesh");
+
+
+// Task 10 
+
+let add = function (a, b) {
+  return a + b;
+};
+console.log("Addition:", add(5, 3));
+
+
+// Task 11
+
+let subtract = (a, b) => a - b;
+console.log("Subtraction:", subtract(10, 4));
+
+
+// Task 12
+
+function calculate(operation, a, b) {
+  return operation(a, b);
+}
+
+function addNumbers(a, b) {
+  return a + b;
+}
+
+function subtractNumbers(a, b) {
+  return a - b;
+}
+
+console.log(calculate(addNumbers, 10, 5));
+console.log(calculate(subtractNumbers, 20, 10));
+
+
+function total(a) {
+  return function (b) {
+    return function (c) {
+      return a + b + c;
+    };
+  };
+}
+
+console.log("Currying Result:", total(5)(10)(15));
+
+
+
+function* reward() {
+  yield "Level1 Completed";
+  yield "Level2 Completed";
+  yield "Level3 Completed";
+  yield "Team Win";
+}
+
+let rewards = reward();
+
+console.log(rewards.next().value);
+console.log(rewards.next().value);
+
+for (let message of reward()) {
+  console.log(message);
+}
+
+// FINAL 
+
+// Object – Team Details
+let team = {
+  name: "gokul",
+  members: 4,
+  project: "JavaScript"
+};
+
+// for...in to print details
+console.log("Team Details:");
+for (let key in team) {
+  console.log(`${key}: ${team[key]}`);
+}
+
+// Callback – Score Calculation
+function calculateScore(operation, a, b) {
+  return operation(a, b);
+}
+
+const multiply = (a, b) => a * b;
+
+console.log("Score:", calculateScore(multiply, 5, 5));
+
+// Generator – Rewards
+function* teamRewards() {
+  yield "Participation";
+  yield "Best Performance";
+}
+
+for (let reward of teamRewards()) {
+  console.log("Reward:", reward);
+}
+
+// Default Parameter
+function teamRegister(name, role = "frontend") {
+  console.log(`Team Member: ${name}, Role: ${role}`);
+}
+
+teamRegister("vijay");
+teamRegister("siva", "Backend");
+
+// Currying for Bonus
+function bonus(a) {
+  return function (b) {
+    return function (c) {
+      return a + b + c;
+    };
+  };
+}
+
+console.log("Bonus Score:", bonus(20)(20)(10));
