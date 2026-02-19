@@ -1,0 +1,232 @@
+// Task 1
+
+let teamA = [
+  { name: "Dinesh", role: "Developer" },
+  { name: "Arun", role: "UI/UX" }
+];
+
+let teamB = [
+  { name: "Surya", role: "Java" },
+  { name: "Siva", role: "SQL" }
+];
+
+let mergedTeam = [...teamA, ...teamB];
+
+console.log("Employee List ");
+mergedTeam.forEach((emp, index) => {
+  console.log(`${index + 1}. ${emp.name} - ${emp.role}`);
+});
+
+console.log("Total Employees:", mergedTeam.length);
+
+mergedTeam.push({ name: "Gokul", role: "C++" });
+
+console.log("After Adding New Employee:");
+console.log("Total Employees:", mergedTeam.length);
+
+let developers = mergedTeam.filter(emp => emp.role === "Developer");
+
+console.log("Developers List:");
+developers.forEach(dev => {
+  console.log(dev.name);
+});
+
+//Task 2
+
+let emp1 = { name: "Dinesh", salary: 30000 };
+let emp2 = { name: "Arun", salary: 45000 };
+
+let mergedEmp = { ...emp1, ...emp2 }; 
+
+console.log("Merged:", mergedEmp);
+
+mergedEmp.salary = 50000;
+
+console.log("Updated Salary:", mergedEmp);
+
+let clonedEmp = { ...mergedEmp };
+
+console.log("Cloned Object:", clonedEmp);
+
+let { name, salary } = clonedEmp;
+
+console.log(`${name} earns ${salary}`);
+
+//Task 3
+
+let cart = ["Laptop", "Phone", "Tab", "Watch"];
+
+cart.pop();
+console.log("After removing last:", cart);
+
+cart.push("Headphones", "Speaker");
+console.log("After adding two at end:", cart);
+
+cart.unshift("Mouse");
+console.log("After adding at beginning:", cart);
+
+cart.shift();
+console.log("After removing first:", cart);
+
+let tabletIndex = cart.indexOf("Tab");
+if (tabletIndex !== -1) {
+  cart.splice(tabletIndex, 1, "Camera");
+}
+console.log("After replacing Tablet:", cart);
+
+let hasPhone = cart.includes("Phone");
+console.log("Phone exists?", hasPhone);
+
+
+let watchIndex = cart.indexOf("Watch");
+console.log("Index of Watch:", watchIndex);
+
+//Task 4
+
+let marks = [78, 90, 66, 84, 99, 45];
+
+
+marks.sort((a, b) => a - b);
+console.log("Sorted Marks:", marks);
+
+
+marks.reverse();
+console.log("Reversed Marks:", marks);
+
+let top3 = marks.slice(0, 3);
+console.log("Top 3 Marks:", top3);
+
+let index84 = marks.indexOf(84);
+console.log("Index of 84:", index84);
+
+let index45 = marks.indexOf(45);
+if (index45 !== -1) {
+  marks.splice(index45, 1, 50);
+}
+
+console.log("After Replacing 45 with 50:", marks);
+
+//Task 5
+
+let company = [
+  "Stackly",
+  ["Frontend", ["HTML", "CSS", ["JavaScript"]]]
+];
+
+let jsNormal = company[1][1][2][0];
+console.log("JavaScript (Normal):", jsNormal);
+
+let [
+  companyName,
+  [department, [tech1, tech2, [jsDestructured]]]
+] = company;
+
+console.log("JavaScript (Destructuring):", jsDestructured);
+
+let flattened = company.flat(Infinity);
+console.log("Flattened Array:", flattened);
+
+company[1][1][1] = "Tailwind";
+console.log("After Replacing CSS:", company);
+
+//Task 6
+
+function attendance(day, ...students) {
+
+  console.log("Day:", day);
+
+  console.log("Total Students:", students.length);
+
+  console.log("First Student:", students[0]);
+
+  console.log("Last Student:", students[students.length - 1]);
+
+  return students;
+}
+
+let allStudents = attendance("Monday", "Dinesh", "Arun", "Surya", "Siva");
+
+console.log("All Students:", allStudents);
+
+//Task 7
+
+let stock = [10, 20, 30, 40, 50];
+
+stock.fill(0, stock.length - 2);
+console.log("After fill:", stock);
+
+stock.push(60, 70);
+console.log("After adding 60 & 70:", stock);
+
+stock.shift();
+console.log("After removing first value:", stock);
+
+let hasThirty = stock.includes(30);
+console.log("Does 30 exist?", hasThirty);
+
+let lastIndex20 = stock.lastIndexOf(20);
+console.log("Last index of 20:", lastIndex20);
+
+stock.reverse();
+console.log("Reversed stock:", stock);
+
+//Task 8
+
+let user = {
+  name: "Dinesh",
+  role: "Developer",
+  skills: ["HTML", "CSS", "JavaScript"]
+};
+
+let { Name, role } = user;
+console.log("Name:", name);
+console.log("Role:", role);
+
+let updatedSkills = [...user.skills, "React"];
+console.log("Updated Skills:", updatedSkills);
+
+let clonedUser = { ...user, skills: updatedSkills };
+console.log("Cloned User:", clonedUser);
+
+let mergedUser = { ...clonedUser, experience: "2 Years" };
+console.log("Merged User:", mergedUser);
+
+console.log("Total Skills:", mergedUser.skills.length);
+
+//Task 9
+
+let sales = [12000, 45000, 22000, 8000, 15000];
+
+sales.sort((a, b) => a - b);
+console.log("Ascending:", sales);
+
+let descending = [...sales].sort((a, b) => b - a);
+console.log("Descending:", descending);
+
+let middle3 = sales.slice(1, 4);
+console.log("Middle 3 Sales:", middle3);
+
+sales.splice(0, 1, 10000);
+console.log("After Replacing Lowest Sale:", sales);
+
+let has50000 = sales.includes(50000);
+console.log("Does 50000 exist?", has50000);
+
+//Task 10
+
+let rawData = [1, 2, null, 4, undefined, 6, [7, 8], { a: 10 }];
+
+console.log("Last Element:", rawData[rawData.length - 1]);
+
+let Flattened = rawData.flat();
+console.log("Flattened Array:", flattened);
+
+flattened.pop();
+console.log("After Removing Last Element:", flattened);
+
+flattened.push(100);
+console.log("After Adding 100:", flattened);
+
+
+let cleanedClone = [...flattened];
+console.log("Cloned Cleaned Array:", cleanedClone);
