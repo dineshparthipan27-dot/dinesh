@@ -1,0 +1,167 @@
+
+// Task 1 
+
+let names = ["Dinesh", "Arun", "Praveen", "Siva"]
+    console.log("Names:-");
+names.forEach((currentElement, Index, TotalArray)=>{
+    console.log(Index + 1 + " - " + currentElement);    
+})
+
+console.log("");      
+
+
+//Task 2 
+let Numbers = [2, 4, 6, 8]
+let squares = Numbers.map(function(num) {
+    return num * num;
+});
+console.log(squares);    
+
+console.log("");
+
+
+//Task 3 
+
+let products = [
+{ name: "Mobile", price: 15000},
+{ name: "Laptop", price: 60000},
+{ name: "Keyboard", price: 1000},
+{ name: "Monitor", price: 12000}
+];
+
+let filterVal = products.filter((c,i,t)=>{
+    return c.price > 10000;
+})
+console.log(filterVal);            
+console.log("");
+
+
+// Task 4 
+
+let product = products.find((c,i,t)=>{
+    return c.price > 10000;
+})
+console.log(product);         
+
+console.log("");
+
+//Task 5 
+
+let Marks = [80, 75, 90, 60]
+let Total = Marks.reduce((sum, mark)=> sum + mark, 0)
+console.log("Total marks",Total);
+
+let average = Total / Marks.length;
+console.log("Average Marks:-", average);       
+
+console.log("");
+
+//Task 6
+
+let Ages = [12, 15, 17, 22]
+
+let isAbove18 = Ages.some(age => age > 18);
+console.log("Any person above 18:", isAbove18);       
+
+console.log("");
+
+// Task 7
+
+let Scores = [60, 70, 80, 90]
+let allPassed = Scores.every(score => score >= 35)
+console.log("All students passed:-", allPassed);          
+console.log("")
+
+// Task 8 
+
+let Prices = [200, 40, 1000, 5, 75]
+let ascending = Prices.sort((a,b)=>{
+    return(a-b);
+})
+console.log("Ascending order:-",ascending);      
+
+let descending = Prices.sort((a,b)=> {
+    return(b - a);
+})
+console.log("Descending order:-",descending);     
+
+
+console.log("");
+
+
+// Task 9
+
+let Name = "Dinesh"
+
+let Capitalized = Name.slice(0,1).toUpperCase() + Name.slice(1);
+console.log("Capitalize First Letter:-",Capitalized);           
+
+console.log("");
+
+// Task 10
+
+let Text = "javascript"
+
+let count = Text.split("a").length - 1;
+console.log("Total no of a letters:-",count);      
+
+console.log("");
+
+//Task 11
+
+let UserInput = " Hi Dinesh "
+
+let trimVal = UserInput.trim()
+console.log("Removed extra spaces:-",trimVal);         
+
+
+let uppercase = UserInput.toUpperCase()
+console.log("Uppercase:-",uppercase);      
+
+
+// Task 12 
+
+let Sentence = "love python"
+
+let replaceVal = Sentence.replace("python", "javascript")    
+console.log(replaceVal);            
+
+let start1 = Sentence.startsWith("I")
+console.log(start1);       
+
+
+let end = replaceVal.endsWith("javascript")
+console.log(end);       
+
+
+let employees = [
+  { name: "A", salary: 25000 },
+  { name: "B", salary: 40000 },
+  { name: "C", salary: 15000 },
+  { name: "D", salary: 60000 }
+];
+
+let highSalary = employees.filter(emp => emp.salary > 30000);
+console.log(highSalary);   
+
+
+let firstHighSalary = employees.find(emp => emp.salary > 30000);
+console.log(firstHighSalary);                      
+
+           
+let totalSalary = employees.reduce(
+  (total, emp) => total + emp.salary,
+  0
+);
+console.log(totalSalary);         
+
+let  lowSalaryExists = employees.some(emp => emp.salary < 20000);
+console.log(lowSalaryExists);                                
+
+
+let allAbove10k = employees.every(emp => emp.salary > 10000);
+console.log(allAbove10k);                              
+
+
+
+
