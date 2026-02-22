@@ -11,6 +11,7 @@ console.log("");
 
 
 //Task 2 
+
 let Numbers = [2, 4, 6, 8]
 let squares = Numbers.map(function(num) {
     return num * num;
@@ -85,7 +86,6 @@ let descending = Prices.sort((a,b)=> {
 })
 console.log("Descending order:-",descending);     
 
-
 console.log("");
 
 
@@ -114,7 +114,6 @@ let UserInput = " Hi Dinesh "
 let trimVal = UserInput.trim()
 console.log("Removed extra spaces:-",trimVal);         
 
-
 let uppercase = UserInput.toUpperCase()
 console.log("Uppercase:-",uppercase);      
 
@@ -129,10 +128,8 @@ console.log(replaceVal);
 let start1 = Sentence.startsWith("I")
 console.log(start1);       
 
-
 let end = replaceVal.endsWith("javascript")
 console.log(end);       
-
 
 let employees = [
   { name: "A", salary: 25000 },
